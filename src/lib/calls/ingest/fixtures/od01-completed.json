@@ -1,0 +1,166 @@
+{
+  "id": "8a9a0e6a-ec0b-493d-993e-5cce2c1111c2",
+  "agent_id": "37e279c2-a82f-422b-8b74-7059fcc73198",
+  "status": "completed",
+  "answered_by_voice_mail": null,
+  "conversation_duration": 97,
+  "total_cost": 12,
+  "transcript": "assistant: ନମସ୍କାର, ମୁଁ Nabz ର AI assistant କହୁଛି। ଏହା କି ଜଗନ୍ନାଥ ହୀରୋ? owner କିମ୍ବା sales manager ଙ୍କ ସହ କଥା ହୋଇପାରିବି କି?\nuser: ୟେସ୍।\nuser: ହଁ ହଁ। କରିପାରିବେ।\nassistant:  ପ୍ରତି ସପ୍ତାହ ଭୁବନେଶ୍ୱର ର Hero dealer ମାନଙ୍କୁ ଛଅଟି ଛୋଟ ପ୍ରଶ୍ନ ପଚାରୁ, ମାତ୍ର ଦେଢ଼ ମିନିଟ୍। ଉତ୍ତର confidential ରହେ, ଆଉ call record ହେଉଛି। ଆରମ୍ଭ କରିବା କି?\nuser: ଆରମ୍ଭ କର।\nassistant:  ଗଲା ସପ୍ତାହଠାରୁ ଏ ସପ୍ତାହ enquiry ଅଧିକ ଆସିଲା, ସେତିକି, ନା କମ୍?\nuser: ସେତିକି ଅଛି। ଆସିଲା।\nassistant:  ଧନ୍ୟବାଦ। ଆଉ booking, ଗଲା ସପ୍ତାହଠାରୁ ଅଧିକ, ସେତିକି, ନା କମ୍?\nuser: ଅଧିକ ଆସିଲା।\nassistant:   ଭଲ। ଏ ସପ୍ତାହ ପ୍ରାୟ କେତେ booking ହେଲା?\nuser: ଦୁଇ ହଜାର।\nassistant:   ଧନ୍ୟବାଦ। ଏବେର ବିକ୍ରି ହିସାବରେ, ଏବେର stock କେତେ ଦିନ ଚାଲିବ?\nuser: ତ। କାଉ।\nuser: ହଁ 10।\nuser: ଦଶ ଦିନ ଛାଡ଼ିବି।\nassistant:   ଧନ୍ୟବାଦ। Hero ଉପରେ discount ଆଉ offer, ଗଲା ସପ୍ତାହଠାରୁ ବଢ଼ୁଛି, ସେତିକି ଅଛି, ନା କମୁଛି?\nuser: କମୁଛି ଟିକେ।\nassistant:    ଧନ୍ୟବାଦ। ଶେଷ ପ୍ରଶ୍ନ: ଗଲା ମାସଠାରୁ, customer ଙ୍କ loan reject ଅଧିକ ହେଉଛି, ସେତିକି, ନା କମ୍?\nuser: ତିନି। ସେତିକି।\nassistant: ବହୁତ ଧନ୍ୟବାଦ, ଆପଣଙ୍କ ଦିନ ଭଲ କଟୁ।\n",
+  "cost_breakdown": {
+    "llm": 1.122,
+    "network": 1,
+    "platform": 4,
+    "synthesizer": 2.248,
+    "transcriber": 0.898,
+    "llm_breakdown": {
+      "hangup": 0,
+      "routing": 0,
+      "analytics": 0,
+      "voicemail": 0,
+      "extraction": 0,
+      "conversation": 1.122,
+      "summarization": 0
+    },
+    "transfer_cost": 0,
+    "total_cost_to_deduct": 7.732,
+    "synthesizer_breakdown": {
+      "conversation": 2.248,
+      "welcome_message": 0
+    },
+    "transcriber_breakdown": {
+      "analytics": 0,
+      "conversation": 0.898
+    }
+  },
+  "extracted_data": {
+    "Pulse": {
+      "outcome": {
+        "objective": "completed",
+        "confidence": 1,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "All six survey questions were asked and answered clearly, including enquiries, bookings trend, booking number, stock duration, discounts trend, and loan rejections.",
+        "reasoning_subjective": null
+      },
+      "stock_days": {
+        "objective": null,
+        "confidence": 0.95,
+        "subjective": "10",
+        "validation": {
+          "is_valid": true,
+          "expected_type": "numeric"
+        },
+        "confidence_label": "High",
+        "reasoning_objective": null,
+        "reasoning_subjective": "Dealer first said 'ତ', then clarified with '10' and 'ଦଶ ଦିନ ଛାଡ଼ିବି', meaning 10 days of stock available."
+      },
+      "bookings_week": {
+        "objective": null,
+        "confidence": 1,
+        "subjective": "2000",
+        "validation": {
+          "is_valid": true,
+          "expected_type": "numeric"
+        },
+        "confidence_label": "High",
+        "reasoning_objective": null,
+        "reasoning_subjective": "Dealer explicitly stated approximately 2000 bookings this week."
+      },
+      "callback_time": {
+        "objective": null,
+        "confidence": 0,
+        "subjective": "",
+        "validation": null,
+        "confidence_label": "Low",
+        "reasoning_objective": null,
+        "reasoning_subjective": "There was no request for callback or mention of owner/manager availability in the transcript."
+      },
+      "bookings_trend": {
+        "objective": "up",
+        "confidence": 1,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "Dealer clearly said bookings were 'ଅଧିକ ଆସିଲା', meaning 'more came'.",
+        "reasoning_subjective": null
+      },
+      "discount_trend": {
+        "objective": "down",
+        "confidence": 0.9,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "Dealer said 'କମୁଛି ଟିକେ', which means 'discounts decreased a little', indicating a downward trend.",
+        "reasoning_subjective": null
+      },
+      "enquiries_trend": {
+        "objective": "same",
+        "confidence": 0.9,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "Dealer said enquiries this week are 'ସେତିକି ଅଛି', which translates as 'the same'.",
+        "reasoning_subjective": null
+      },
+      "loan_rejections": {
+        "objective": "high",
+        "confidence": 0.85,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "Dealer said 'ତିନି' to last month's loan rejections being 'more', indicating a higher rejection rate than last month.",
+        "reasoning_subjective": null
+      },
+      "stock_days_status": {
+        "objective": "answered",
+        "confidence": 1,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "Dealer gave a clear numeric response (10 days) to the stock duration question.",
+        "reasoning_subjective": null
+      },
+      "bookings_week_status": {
+        "objective": "answered",
+        "confidence": 1,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "Dealer provided a clear numeric booking figure after being asked.",
+        "reasoning_subjective": null
+      }
+    }
+  },
+  "error_message": null,
+  "termination_reason": "agent_ended_call",
+  "initiated_at": "2026-10-29T17:40:29.640983",
+  "created_at": "2026-10-29T17:40:27.281346+00:00",
+  "updated_at": "2026-10-29T17:42:42.267973+00:00",
+  "telephony_data": {
+    "duration": 97,
+    "to_number": "+910000000000",
+    "from_number": "+910000000000",
+    "recording_url": "https://example.invalid/recording",
+    "hosted_telephony": true,
+    "provider_call_id": "scrubbed",
+    "call_type": "outbound",
+    "provider": "plivo",
+    "hangup_by": "Plivo",
+    "hangup_reason": "end_call_tool",
+    "hangup_provider_code": 4010,
+    "ring_duration": 12,
+    "post_dial_delay": 3
+  },
+  "context_details": {
+    "recipient_data": {
+      "city": "ଭୁବନେଶ୍ୱର",
+      "brand": "Hero",
+      "dealer_name": "ଜଗନ୍ନାଥ ହୀରୋ",
+      "repeat_call": "no"
+    },
+    "recipient_phone_number": "+910000000000"
+  },
+  "batch_id": null,
+  "agent_version_id": "e9ba36ab-2efb-48bf-a6bf-da14561883d7"
+}

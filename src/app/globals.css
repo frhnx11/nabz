@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+/*
+ * Nabz design tokens: a minimal white-and-blue, light-only look (Tailwind's slate and blue scales).
+ * Components use the semantic names below through Tailwind (bg-surface, text-muted, border-line, …).
+ * The default Tailwind palette is switched off, so only these colours exist and nothing drifts.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* Neutrals (slate) */
+  --bg: oklch(98.4% 0.003 247.858); /* slate-50: page */
+  --surface: #ffffff; /* cards, header */
+  --ink: oklch(20.8% 0.042 265.755); /* slate-900: primary text */
+  --ink-2: oklch(37.2% 0.044 257.287); /* slate-700: strong secondary */
+  --subtle: oklch(44.6% 0.043 257.281); /* slate-600: nav, secondary controls */
+  --muted: oklch(55.4% 0.046 257.417); /* slate-500: secondary text */
+  --faint: oklch(70.4% 0.04 256.788); /* slate-400: labels, placeholders */
+  --line-strong: oklch(86.9% 0.022 252.894); /* slate-300: inputs, secondary buttons */
+  --line: oklch(92.9% 0.013 255.508); /* slate-200: borders */
+  --line-soft: oklch(96.8% 0.007 247.896); /* slate-100: row dividers, hover fills */
+
+  /* Accent (blue) */
+  --accent: oklch(54.6% 0.245 262.881); /* blue-600 */
+  --accent-hover: oklch(48.8% 0.243 264.376); /* blue-700 */
+  --accent-soft: oklch(97% 0.014 254.604); /* blue-50 */
+  --accent-tint: oklch(93.2% 0.032 255.585); /* blue-100 */
+  --accent-ring: oklch(88.2% 0.059 254.128); /* blue-200 */
+  --accent-bright: oklch(62.3% 0.214 259.815); /* blue-500: focus rings */
+
+  /* Status (emerald / amber / red), each with text, soft fill, ring and dot shades */
+  --good: oklch(50.8% 0.118 165.612);
+  --good-soft: oklch(97.9% 0.021 166.113);
+  --good-ring: oklch(90.5% 0.093 164.15);
+  --good-dot: oklch(69.6% 0.17 162.48);
+  --warn: oklch(55.5% 0.163 48.998);
+  --warn-soft: oklch(98.7% 0.022 95.277);
+  --warn-ring: oklch(92.4% 0.12 95.746);
+  --warn-dot: oklch(76.9% 0.188 70.08);
+  --bad: oklch(50.5% 0.213 27.518);
+  --bad-soft: oklch(97.1% 0.013 17.38);
+  --bad-ring: oklch(88.5% 0.062 18.334);
+  --bad-dot: oklch(63.7% 0.237 25.331);
+
+  /* Index scale (diverging): weaker signal red, stronger blue, 50 = slate. Blue/red rather than
+     green/red so it stays readable with red-green colour blindness (CVD ΔE 30 vs 8.6). */
+  --index-up: oklch(54.6% 0.245 262.881); /* blue-600 */
+  --index-down: oklch(57.7% 0.245 27.325); /* red-600 */
+  --index-flat: oklch(96.8% 0.007 247.896); /* slate-100 */
+}
+
+@theme inline {
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-subtle: var(--subtle);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line-strong: var(--line-strong);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-tint: var(--accent-tint);
+  --color-accent-ring: var(--accent-ring);
+  --color-accent-bright: var(--accent-bright);
+  --color-good: var(--good);
+  --color-good-soft: var(--good-soft);
+  --color-good-ring: var(--good-ring);
+  --color-good-dot: var(--good-dot);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-warn-ring: var(--warn-ring);
+  --color-warn-dot: var(--warn-dot);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-bad-ring: var(--bad-ring);
+  --color-bad-dot: var(--bad-dot);
+  --color-index-up: var(--index-up);
+  --color-index-down: var(--index-down);
+  --color-index-flat: var(--index-flat);
+
+  --font-sans: var(--font-geist-sans), var(--font-devanagari), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+@layer base {
+  html {
+    background: var(--surface);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    letter-spacing: -0.015em;
+  }
+
+  ::selection {
+    background: var(--accent-ring);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-bright);
+    outline-offset: 2px;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--line-strong) transparent;
+  }
+}
+
+@layer components {
+  /* Small uppercase label above a heading, value or table column. */
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--faint);
+  }
+
+  /* Numbers line up in tables and tiles. */
+  .num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* The top bar's tabs are square-cornered blocks that fill it, not pills. Outside any layer, so it beats utilities. */
+.header-tabs {
+  align-self: stretch;
+}
+
+.header-tabs > nav {
+  align-items: stretch;
+  gap: 0;
+  height: 100%;
+  padding-block: 0;
+}
+
+.header-tabs > nav > a {
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0.75rem 1.25rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "id": "a13095ef-c732-41ca-b308-99ec6e4d379b",
+  "agent_id": "017e390a-7737-454d-9edd-861588cda64c",
+  "status": "completed",
+  "answered_by_voice_mail": null,
+  "conversation_duration": 155,
+  "total_cost": 18,
+  "transcript": "assistant: नमस्ते, मैं Nabz की AI assistant बोल रही हूँ। क्या ये विनायक हीरो मोटर्स है? Owner या sales manager से बात हो सकती है?\nuser: मैं ही सेल्स मैनेजर हूं।\nassistant:  हर हफ़्ते बेंगलुरु के Hero dealers से छह छोटे सवाल पूछते हैं, बस डेढ़ मिनट लगेगा। जवाब confidential रहते हैं, और call record हो रही है। शुरू करें?\nuser: ठीक है।\nassistant:  पिछले हफ़्ते से इस हफ़्ते enquiries ज़्यादा आईं, उतनी ही, या कम?\nuser: इनक्वायरी सही।\nassistant:  ज़्यादा, उतना ही, या कम?\nuser: होता नहीं है। हो।\nassistant:   ठीक है।  \nऔर bookings, पिछले हफ़्ते से ज़्यादा, उतनी ही, या कम?\nuser: बुकिंग की हो रही है।\nassistant:   ज़्यादा, उतनी ही, या कम?\nuser: उतनी ही उतनी।\nassistant:  अच्छा।  \nइस हफ़्ते लगभग कितनी bookings हुईं?\nuser: डीलिंग हुई है।\nassistant:   ज़्यादा, उतनी ही, या कम?\nuser: बी सुई है बी।\nassistant:  अंदाज़ा भी चलेगा।\nuser: ज्यादा हुई है।\nassistant:   अच्छा।  \nअभी की बिक्री के हिसाब से, अभी का stock कितने दिन चलेगा?\nuser: हाँ।\nassistant: अभी का stock\nuser: पंद्रह दिन बाद चलेगा।\nassistant:   ठीक है।  \nHero पर discount और offers, पिछले हफ़्ते से बढ़ रहे हैं, उतने ही हैं, या कम हो रहे हैं?\nuser: नहीं है।\nassistant:    कम हो रहे हैं?\nuser: पतले ही हैं।\nassistant:   ज़्यादा, उतना ही, या कम?\nuser: उतने ही हैं।\nassistant:   अच्छा।  \nआख़िरी सवाल: पिछले महीने से, customers के loan reject ज़्यादा हो रहे हैं, उतने ही, या कम?\nuser: ज़्यादा हो रहे हैं।\nassistant:  बहुत शुक्रिया, आपका दिन अच्छा रहे।\nuser: और कुछ?\nassistant:  धन्यवाद जी, नमस्ते!\nuser: इट्स नॉट फिटिंग।\nassistant:  नहीं जी, हम कुछ बेच नहीं रहे। Nabz एक market research company है, जो पूरे India में vehicle demand track करती है।\nuser: क्या आपको पता है दो प्लस दो क्या होता है?\nassistant:   जी हाँ, मैं AI assistant हूँ। बस छह सवाल, डेढ़ मिनट। शुरू करें?\n",
+  "cost_breakdown": {
+    "llm": 1.792,
+    "network": 1.5,
+    "platform": 6,
+    "synthesizer": 3.888,
+    "transcriber": 1.441,
+    "llm_breakdown": {
+      "hangup": 0,
+      "routing": 0,
+      "analytics": 0,
+      "voicemail": 0,
+      "extraction": 0,
+      "conversation": 1.792,
+      "summarization": 0
+    },
+    "transfer_cost": 0,
+    "total_cost_to_deduct": 10.879,
+    "synthesizer_breakdown": {
+      "conversation": 3.888,
+      "welcome_message": 0
+    },
+    "transcriber_breakdown": {
+      "analytics": 0,
+      "conversation": 1.441
+    }
+  },
+  "extracted_data": {
+    "Pulse": {
+      "outcome": {
+        "objective": "completed",
+        "confidence": 1,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "All six survey questions were asked and the dealer responded to each; some answers were unclear but all questions were answered to some extent.",
+        "reasoning_subjective": null
+      },
+      "stock_days": {
+        "objective": null,
+        "confidence": 1,
+        "subjective": "15",
+        "validation": {
+          "is_valid": true,
+          "expected_type": "numeric"
+        },
+        "confidence_label": "High",
+        "reasoning_objective": null,
+        "reasoning_subjective": "Dealer explicitly stated 'पंद्रह दिन बाद चलेगा' (stock will last 15 days)."
+      },
+      "bookings_week": {
+        "objective": null,
+        "confidence": 0.4,
+        "subjective": "unclear",
+        "validation": {
+          "is_valid": false,
+          "expected_type": "numeric"
+        },
+        "confidence_label": "Low",
+        "reasoning_objective": null,
+        "reasoning_subjective": "Dealer did not provide a clear numeric value despite being asked, replies like 'डीलिंग हुई है' and 'बी सुई है बी' are unclear, with a vague 'ज्यादा हुई है' afterwards that conflicts with earlier same trend."
+      },
+      "callback_time": {
+        "objective": null,
+        "confidence": 0,
+        "subjective": "",
+        "validation": null,
+        "confidence_label": "Low",
+        "reasoning_objective": null,
+        "reasoning_subjective": "Dealer did not request a callback or mention availability of owner/manager at a later time."
+      },
+      "bookings_trend": {
+        "objective": "same",
+        "confidence": 0.9,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "The dealer clearly said bookings were 'उतनी ही उतनी', meaning the same as last week.",
+        "reasoning_subjective": null
+      },
+      "discount_trend": {
+        "objective": "same",
+        "confidence": 0.8,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "Though the dealer initially said 'नहीं है' and 'पतले ही हैं' (possibly low), they later clarified discounts are 'उतने ही हैं', indicating discounts are about the same as last week.",
+        "reasoning_subjective": null
+      },
+      "enquiries_trend": {
+        "objective": "unclear",
+        "confidence": 0.5,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "Medium",
+        "reasoning_objective": "The dealer's reply to enquiries was mixed and unclear, e.g., 'इनक्वायरी सही', 'होता नहीं है। हो।', which does not clearly state whether enquiries are up, same, or down.",
+        "reasoning_subjective": null
+      },
+      "loan_rejections": {
+        "objective": "high",
+        "confidence": 0.9,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "Dealer clearly said 'ज़्यादा हो रहे हैं' meaning loan rejections are higher than last month.",
+        "reasoning_subjective": null
+      },
+      "stock_days_status": {
+        "objective": "answered",
+        "confidence": 1,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "Dealer gave a precise duration for the stock lasting: 15 days.",
+        "reasoning_subjective": null
+      },
+      "bookings_week_status": {
+        "objective": "unclear",
+        "confidence": 0.5,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "Medium",
+        "reasoning_objective": "No clear numeric answer was given despite being asked multiple times; responses were ambiguous or unrelated to a precise number.",
+        "reasoning_subjective": null
+      }
+    }
+  },
+  "error_message": null,
+  "termination_reason": "user_hung_up",
+  "initiated_at": "2026-10-28T23:46:23.891298",
+  "created_at": "2026-10-28T23:46:23.120435+00:00",
+  "updated_at": "2026-10-28T23:49:26.150163+00:00",
+  "telephony_data": {
+    "duration": 155,
+    "to_number": "+910000000000",
+    "from_number": "+910000000000",
+    "recording_url": "https://example.invalid/recording",
+    "hosted_telephony": true,
+    "provider_call_id": "scrubbed",
+    "call_type": "outbound",
+    "provider": "plivo",
+    "hangup_by": "Callee",
+    "hangup_reason": "Call recipient hungup",
+    "hangup_provider_code": 4000,
+    "ring_duration": 5,
+    "post_dial_delay": 0
+  },
+  "context_details": {
+    "recipient_data": {
+      "city": "बेंगलुरु",
+      "brand": "Hero",
+      "dealer_name": "विनायक हीरो मोटर्स",
+      "repeat_call": "no"
+    },
+    "recipient_phone_number": "+910000000000"
+  },
+  "batch_id": null,
+  "agent_version_id": "a7402968-11be-4370-8c1e-5a0b32a42860"
+}

@@ -1,0 +1,2 @@
+ALTER TABLE "set_recipients" DROP CONSTRAINT "set_recipients_exclusion_ck";--> statement-breakpoint
+ALTER TABLE "set_recipients" ADD CONSTRAINT "set_recipients_exclusion_ck" CHECK (("set_recipients"."included" = ("set_recipients"."exclusion_reason" is null)) and ("set_recipients"."exclusion_reason" is null or "set_recipients"."exclusion_reason" in ('not_permitted', 'no_agent')));

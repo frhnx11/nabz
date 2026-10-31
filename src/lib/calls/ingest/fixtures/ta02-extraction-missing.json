@@ -1,0 +1,69 @@
+{
+  "id": "fd945d09-d683-489c-8e5f-93def7ae8ef0",
+  "agent_id": "5683fce7-dc22-4b5b-bfea-47b6f8150c7a",
+  "status": "completed",
+  "answered_by_voice_mail": null,
+  "conversation_duration": 94,
+  "total_cost": 12,
+  "transcript": "assistant: வணக்கம்ங்க, நான் Nabz-ஓட AI assistant பேசுறேன். இது ஸ்ரீ முருகன் TVS-ஆ? Owner இல்ல sales manager கிட்ட பேசலாமா?\nuser: ஆ சொல்லுங்க.\nassistant:  ஒவ்வொரு வாரமும் கோயம்புத்தூர்-ல TVS dealers கிட்ட ஆறு சின்ன கேள்வி கேக்குறோம், ஒண்ணரை நிமிஷம்தான். உங்க பதில் confidential, call record ஆகுது. ஆரம்பிக்கலாமா?\nuser: சார், இப்போ.\nassistant:  போன வாரத்த விட இந்த வாரம் enquiries அதிகமா, அதே அளவா, இல்ல கம்மியா?\nuser: கொஞ்சம் கம்மியாயிடுச்சு.\nassistant:   சரிங்க. Bookings, போன வாரத்த விட அதிகமா, அதே அளவா, இல்ல கம்மியா?\nuser: பல்ஸ் கம்மியா அடிச்சது.\nassistant:  சரி. இந்த வாரம் சுமாரா எத்தனை bookings ஆச்சு?\nuser: பன்னண்டு.\nassistant:   சரிங்க. இப்போ விக்குற வேகத்துல, இருக்குற stock எத்தனை நாளைக்கு வரும்?\nuser: ஒரு மூணு வாரத்துக்கு வரும்.\nassistant:   சரி. TVS-ல discount, offers, போன வாரத்த விட அதிகமாகுதா, அதே மாதிரியா, இல்ல கம்மியாகுதா?\nuser: ஏதும் விற்க மாட்டேங்குதே, அதனால டிஸ்கவுண்ட்ட கூட்டிட்டோம் இப்போ.\nassistant:   அதிகமா, அதே அளவா, இல்ல கம்மியா?\nuser: அதிகம்.\nassistant:    கடைசி கேள்வி: போன மாசத்த விட, customers loan reject ஆகுறது அதிகமா, அதே அளவா, இல்ல கம்மியா?\nuser: அதிகம்.\nassistant: ரொம்ப நன்றிங்க, நல்ல நாளா இருக்கட்டும்.\n",
+  "cost_breakdown": {
+    "llm": 0.959,
+    "network": 1,
+    "platform": 4,
+    "synthesizer": 2.616,
+    "transcriber": 0.875,
+    "llm_breakdown": {
+      "hangup": 0,
+      "routing": 0,
+      "analytics": 0,
+      "voicemail": 0,
+      "extraction": 0,
+      "conversation": 0.959,
+      "summarization": 0
+    },
+    "transfer_cost": 0,
+    "total_cost_to_deduct": 7.55,
+    "synthesizer_breakdown": {
+      "conversation": 2.616,
+      "welcome_message": 0
+    },
+    "transcriber_breakdown": {
+      "analytics": 0,
+      "conversation": 0.875
+    }
+  },
+  "extracted_data": {
+    "Pulse": {}
+  },
+  "error_message": null,
+  "termination_reason": "agent_ended_call",
+  "initiated_at": "2026-10-28T23:25:40.001380",
+  "created_at": "2026-10-28T23:25:37.995213+00:00",
+  "updated_at": "2026-10-28T23:27:44.052363+00:00",
+  "telephony_data": {
+    "duration": 94,
+    "to_number": "+910000000000",
+    "from_number": "+910000000000",
+    "recording_url": "https://example.invalid/recording",
+    "hosted_telephony": true,
+    "provider_call_id": "scrubbed",
+    "call_type": "outbound",
+    "provider": "plivo",
+    "hangup_by": "Plivo",
+    "hangup_reason": "end_call_tool",
+    "hangup_provider_code": 4010,
+    "ring_duration": 8,
+    "post_dial_delay": 2
+  },
+  "context_details": {
+    "recipient_data": {
+      "city": "கோயம்புத்தூர்",
+      "brand": "TVS",
+      "dealer_name": "ஸ்ரீ முருகன் TVS",
+      "repeat_call": "no"
+    },
+    "recipient_phone_number": "+910000000000"
+  },
+  "batch_id": null,
+  "agent_version_id": "4506c600-6b0a-4d40-ae53-cef90db4832e"
+}

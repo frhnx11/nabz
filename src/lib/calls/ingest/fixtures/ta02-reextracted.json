@@ -1,0 +1,102 @@
+{
+  "extracted_data": {
+    "Pulse": {
+      "enquiries_trend": {
+        "subjective": null,
+        "objective": "down",
+        "confidence": 0.95,
+        "confidence_label": "High",
+        "reasoning_subjective": null,
+        "reasoning_objective": "Dealer said enquiries were 'கொஞ்சம் கம்மியாயிடுச்சு' meaning slightly less than last week, indicating down trend clearly.",
+        "validation": null
+      },
+      "bookings_trend": {
+        "subjective": null,
+        "objective": "down",
+        "confidence": 0.95,
+        "confidence_label": "High",
+        "reasoning_subjective": null,
+        "reasoning_objective": "Dealer said bookings were 'பல்ஸ் கம்மியா அடிச்சது', meaning bookings were much less than last week, clearly down trend.",
+        "validation": null
+      },
+      "bookings_week": {
+        "subjective": "12",
+        "objective": null,
+        "confidence": 1,
+        "confidence_label": "High",
+        "reasoning_subjective": "Dealer directly responded with the number 'பன்னண்டு' which means 12 bookings this week.",
+        "reasoning_objective": null,
+        "validation": {
+          "is_valid": true,
+          "expected_type": "numeric"
+        }
+      },
+      "bookings_week_status": {
+        "subjective": null,
+        "objective": "answered",
+        "confidence": 1,
+        "confidence_label": "High",
+        "reasoning_subjective": null,
+        "reasoning_objective": "A specific number was given for weekly bookings, so question is answered.",
+        "validation": null
+      },
+      "stock_days": {
+        "subjective": "24",
+        "objective": null,
+        "confidence": 0.9,
+        "confidence_label": "High",
+        "reasoning_subjective": "Dealer said stock will last 'ஒரு மூணு வாரத்துக்கு', meaning 1.3 weeks approx 9 days; commonly '1 to 1.3 weeks'. Interpreted as about 9 days, but to be more consistent with fractions, 1.3 weeks = 9.1 days rounded to 9; however with uncertainty it's safer to convert 1.3 weeks as approx 9 to 10 days, but in Tamil 'ஒரு மூணு' can mean 1.3 so about 9 days. On reconsideration 'ஒரு மூணு வாரத்துக்கு' translates to 'one and a third weeks' which is 1.33*7=9.3 days rounded 9. But to be strict with instructions, fractions should be converted to decimal fractions. But that is not the example case; here 'ஒரு மூணு வாரம்' meaning 1.3 weeks. Accepted as 9 days (1.33*7=9.33 ~9 days).",
+        "reasoning_objective": null,
+        "validation": {
+          "is_valid": true,
+          "expected_type": "numeric"
+        }
+      },
+      "stock_days_status": {
+        "subjective": null,
+        "objective": "answered",
+        "confidence": 0.9,
+        "confidence_label": "High",
+        "reasoning_subjective": null,
+        "reasoning_objective": "Dealer gave a specific duration for stock: one and a third weeks, so question is answered.",
+        "validation": null
+      },
+      "discount_trend": {
+        "subjective": null,
+        "objective": "up",
+        "confidence": 0.9,
+        "confidence_label": "High",
+        "reasoning_subjective": null,
+        "reasoning_objective": "Dealer said they increased discounts now because sales are low, meaning discounts are up compared to last week.",
+        "validation": null
+      },
+      "loan_rejections": {
+        "subjective": null,
+        "objective": "high",
+        "confidence": 0.9,
+        "confidence_label": "High",
+        "reasoning_subjective": null,
+        "reasoning_objective": "Dealer said loan rejections are 'அதிகம்' meaning high or more than last month.",
+        "validation": null
+      },
+      "outcome": {
+        "subjective": null,
+        "objective": "completed",
+        "confidence": 1,
+        "confidence_label": "High",
+        "reasoning_subjective": null,
+        "reasoning_objective": "All six survey questions were asked and the dealer answered each of them, so survey is completed.",
+        "validation": null
+      },
+      "callback_time": {
+        "subjective": "",
+        "objective": null,
+        "confidence": 0,
+        "confidence_label": "Low",
+        "reasoning_subjective": "No callback or future time for call was mentioned.",
+        "reasoning_objective": null,
+        "validation": null
+      }
+    }
+  }
+}

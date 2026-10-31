@@ -1,0 +1,166 @@
+{
+  "id": "3fc9fcdc-0049-4ef7-afc4-dc7403fa7229",
+  "agent_id": "4f7929fb-8e19-4d6e-a9db-5129fcea1356",
+  "status": "completed",
+  "answered_by_voice_mail": null,
+  "conversation_duration": 96,
+  "total_cost": 12,
+  "transcript": "assistant: Hello, this is the Nabz AI assistant. Is this Vinayak Hero Motors? Could I speak with the owner or the sales manager?\nuser: Yeah, you're talking to the owner.\nassistant:  Every week we ask Hero dealers in Bengaluru six quick questions, about a minute and a half. Your answers stay confidential, and the call is recorded. Shall we start?\nuser: Yes, Hero.\nassistant:  Were enquiries this week higher than last week, the same, or lower?\nuser: Ah the one you're looking for.\nassistant:  Higher, the same, or lower?\nuser: They were the same.\nassistant:   And bookings: compared with last week, more, the same, or fewer?\nuser: The same.\nassistant:   Roughly how many bookings this week?\nuser: Around 20.\nassistant:    At today's selling pace, how many days will your current stock last?\nuser: I think around 15 days.\nassistant:    Discounts and offers on Hero: compared with last week, going up, the same, or coming down?\nuser: They are coming down.\nassistant:    Last one: compared with last month, are customers' loans getting rejected more, the same, or less?\nuser: And.\nassistant: Yes,\nuser: The thing is the loans of only one. Showroom. Yes.\nuser: is decreasing.\nassistant: Thank you very much, have a good day.\n",
+  "cost_breakdown": {
+    "llm": 0.855,
+    "network": 1,
+    "platform": 4,
+    "synthesizer": 2.796,
+    "transcriber": 0.894,
+    "llm_breakdown": {
+      "hangup": 0,
+      "routing": 0,
+      "analytics": 0,
+      "voicemail": 0,
+      "extraction": 0,
+      "conversation": 0.855,
+      "summarization": 0
+    },
+    "transfer_cost": 0,
+    "total_cost_to_deduct": 7.455,
+    "synthesizer_breakdown": {
+      "conversation": 2.796,
+      "welcome_message": 0
+    },
+    "transcriber_breakdown": {
+      "analytics": 0,
+      "conversation": 0.894
+    }
+  },
+  "extracted_data": {
+    "Pulse": {
+      "outcome": {
+        "objective": "completed",
+        "confidence": 1,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "All six standard survey questions were asked and answered, making the call completed.",
+        "reasoning_subjective": null
+      },
+      "stock_days": {
+        "objective": null,
+        "confidence": 0.95,
+        "subjective": "15",
+        "validation": {
+          "is_valid": true,
+          "expected_type": "numeric"
+        },
+        "confidence_label": "High",
+        "reasoning_objective": null,
+        "reasoning_subjective": "Dealer said stock would last 'around 15 days'."
+      },
+      "bookings_week": {
+        "objective": null,
+        "confidence": 0.95,
+        "subjective": "20",
+        "validation": {
+          "is_valid": true,
+          "expected_type": "numeric"
+        },
+        "confidence_label": "High",
+        "reasoning_objective": null,
+        "reasoning_subjective": "Dealer clearly said 'around 20' bookings this week."
+      },
+      "callback_time": {
+        "objective": null,
+        "confidence": 0,
+        "subjective": "",
+        "validation": null,
+        "confidence_label": "Low",
+        "reasoning_objective": null,
+        "reasoning_subjective": "No callback requested or owner/manager availability time given."
+      },
+      "bookings_trend": {
+        "objective": "same",
+        "confidence": 0.95,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "Dealer explicitly stated bookings were 'the same' as last week.",
+        "reasoning_subjective": null
+      },
+      "discount_trend": {
+        "objective": "down",
+        "confidence": 0.95,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "Dealer explicitly said discounts are 'coming down'.",
+        "reasoning_subjective": null
+      },
+      "enquiries_trend": {
+        "objective": "same",
+        "confidence": 0.95,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "Dealer explicitly said enquiries were 'the same' compared to last week.",
+        "reasoning_subjective": null
+      },
+      "loan_rejections": {
+        "objective": "low",
+        "confidence": 0.85,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "Dealer indicated loans are 'decreasing' and mentioned only one rejection, implying lower rejections than before.",
+        "reasoning_subjective": null
+      },
+      "stock_days_status": {
+        "objective": "answered",
+        "confidence": 1,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "The dealer gave a clear estimate of 15 days stock duration.",
+        "reasoning_subjective": null
+      },
+      "bookings_week_status": {
+        "objective": "answered",
+        "confidence": 1,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "The dealer gave a numeric estimate for bookings.",
+        "reasoning_subjective": null
+      }
+    }
+  },
+  "error_message": null,
+  "termination_reason": "agent_ended_call",
+  "initiated_at": "2026-10-28T23:53:50.987154",
+  "created_at": "2026-10-28T23:53:50.047787+00:00",
+  "updated_at": "2026-10-28T23:55:42.020953+00:00",
+  "telephony_data": {
+    "duration": 96,
+    "to_number": "+910000000000",
+    "from_number": "+910000000000",
+    "recording_url": "https://example.invalid/recording",
+    "hosted_telephony": true,
+    "provider_call_id": "scrubbed",
+    "call_type": "outbound",
+    "provider": "plivo",
+    "hangup_by": "Plivo",
+    "hangup_reason": "end_call_tool",
+    "hangup_provider_code": 4010,
+    "ring_duration": 5,
+    "post_dial_delay": 2
+  },
+  "context_details": {
+    "recipient_data": {
+      "city": "Bengaluru",
+      "brand": "Hero",
+      "dealer_name": "Vinayak Hero Motors",
+      "repeat_call": "no"
+    },
+    "recipient_phone_number": "+910000000000"
+  },
+  "batch_id": null,
+  "agent_version_id": "a268f419-ba56-4d6a-a8a2-4c540b7b6985"
+}

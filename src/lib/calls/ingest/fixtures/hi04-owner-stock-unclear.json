@@ -1,0 +1,166 @@
+{
+  "id": "35e5d569-5c86-46ef-a8fd-2369038440db",
+  "agent_id": "017e390a-7737-454d-9edd-861588cda64c",
+  "status": "completed",
+  "answered_by_voice_mail": null,
+  "conversation_duration": 98,
+  "total_cost": 12,
+  "transcript": "assistant: नमस्ते, मैं Nabz की AI assistant बोल रही हूँ। क्या ये विनायक हीरो मोटर्स है? Owner या sales manager से बात हो सकती है?\nuser: हाँ हाँ, मैं ओनर ही बात कर रहा हूँ।\nassistant:  हर हफ़्ते बेंगलुरु के Hero dealers से छह छोटे सवाल पूछते हैं, बस डेढ़ मिनट लगेगा। जवाब confidential रहते हैं, और call record हो रही है। शुरू करें?\nuser: ठीक है, शुरू करें। करते।\nassistant:  पिछले हफ़्ते से इस हफ़्ते enquiries ज़्यादा आईं, उतनी ही, या कम?\nuser: इनक्वायरी।\nuser: रिस्क कम हो गई है।\nassistant:  ज़्यादा, उतना ही, या कम?\nuser: कम।\nassistant:  और bookings, पिछले हफ़्ते से ज़्यादा, उतनी ही, या कम?\nuser: तब।\nassistant:  ज़्यादा, उतनी ही, या कम?\nuser: कम कम।\nassistant:  इस हफ़्ते लगभग कितनी bookings हुईं?\nuser: हाँ।\nuser: पचास क्या? आसपास।\nassistant:   ठीक है। अभी की बिक्री के हिसाब से, अभी का stock कितने दिन चलेगा?\nuser: हाँ।\nuser: इस दिन के आसपास।\nuser: के आसपास।\nassistant:    ज़्यादा, उतने ही, या कम?\nuser: नहीं।\nassistant:  ठीक है, आगे चलते हैं।  \nHero पर discount और offers, पिछले हफ़्ते से बढ़ रहे हैं, उतने ही हैं, या कम हो रहे हैं?\nuser: हाँ डिस्काउंट कम हो गया।\nassistant:    आख़िरी सवाल: पिछले महीने से, customers के loan reject ज़्यादा हो रहे हैं, उतने ही, या कम?\nuser: लोन रिजेक्शन।\nuser: तो कम है।\nassistant: बहुत शुक्रिया, आपका दिन अच्छा रहे।\n",
+  "cost_breakdown": {
+    "llm": 1.254,
+    "network": 1,
+    "platform": 4,
+    "synthesizer": 2.984,
+    "transcriber": 0.907,
+    "llm_breakdown": {
+      "hangup": 0,
+      "routing": 0,
+      "analytics": 0,
+      "voicemail": 0,
+      "extraction": 0,
+      "conversation": 1.254,
+      "summarization": 0
+    },
+    "transfer_cost": 0,
+    "total_cost_to_deduct": 6.855,
+    "synthesizer_breakdown": {
+      "conversation": 2.984,
+      "welcome_message": 0
+    },
+    "transcriber_breakdown": {
+      "analytics": 0,
+      "conversation": 0.907
+    }
+  },
+  "extracted_data": {
+    "Pulse": {
+      "outcome": {
+        "objective": "completed",
+        "confidence": 0.95,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "All six survey questions were asked and dealer responded to each, including numeric and trend answers.",
+        "reasoning_subjective": null
+      },
+      "stock_days": {
+        "objective": null,
+        "confidence": 0.2,
+        "subjective": "",
+        "validation": {
+          "is_valid": false,
+          "expected_type": "numeric"
+        },
+        "confidence_label": "Low",
+        "reasoning_objective": null,
+        "reasoning_subjective": "Dealer replied vaguely 'इस दिन के आसपास। के आसपास।' without a clear numeric answer to days of stock, making interpretation uncertain."
+      },
+      "bookings_week": {
+        "objective": null,
+        "confidence": 0.8,
+        "subjective": "50",
+        "validation": {
+          "is_valid": true,
+          "expected_type": "numeric"
+        },
+        "confidence_label": "High",
+        "reasoning_objective": null,
+        "reasoning_subjective": "Dealer gave 'पचास क्या? आसपास' indicating approximately 50 bookings this week."
+      },
+      "callback_time": {
+        "objective": null,
+        "confidence": 0,
+        "subjective": "",
+        "validation": null,
+        "confidence_label": "Low",
+        "reasoning_objective": null,
+        "reasoning_subjective": "No callback or future time was mentioned in the transcript."
+      },
+      "bookings_trend": {
+        "objective": "down",
+        "confidence": 0.9,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "Dealer responded 'कम कम' to bookings compared to last week, indicating a decrease.",
+        "reasoning_subjective": null
+      },
+      "discount_trend": {
+        "objective": "down",
+        "confidence": 0.9,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "Dealer said 'डिस्काउंट कम हो गया' indicating discounts have decreased compared to last week.",
+        "reasoning_subjective": null
+      },
+      "enquiries_trend": {
+        "objective": "down",
+        "confidence": 0.9,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "Dealer said 'कमी' indicating enquiries are less this week compared to last week.",
+        "reasoning_subjective": null
+      },
+      "loan_rejections": {
+        "objective": "low",
+        "confidence": 0.9,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "Dealer said 'लोन रिजेक्शन तो कम है', meaning loan rejections are less than before.",
+        "reasoning_subjective": null
+      },
+      "stock_days_status": {
+        "objective": "unclear",
+        "confidence": 0.3,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "Low",
+        "reasoning_objective": "Reply to stock days question was vague and non-numeric, thus unclear.",
+        "reasoning_subjective": null
+      },
+      "bookings_week_status": {
+        "objective": "answered",
+        "confidence": 0.9,
+        "subjective": null,
+        "validation": null,
+        "confidence_label": "High",
+        "reasoning_objective": "Dealer gave a numeric estimate for bookings when asked.",
+        "reasoning_subjective": null
+      }
+    }
+  },
+  "error_message": null,
+  "termination_reason": "agent_ended_call",
+  "initiated_at": "2026-10-29T17:44:40.388747",
+  "created_at": "2026-10-29T17:44:39.912328+00:00",
+  "updated_at": "2026-10-29T17:46:42.592503+00:00",
+  "telephony_data": {
+    "duration": 98,
+    "to_number": "+910000000000",
+    "from_number": "+910000000000",
+    "recording_url": "https://example.invalid/recording",
+    "hosted_telephony": true,
+    "provider_call_id": "scrubbed",
+    "call_type": "outbound",
+    "provider": "plivo",
+    "hangup_by": "Plivo",
+    "hangup_reason": "end_call_tool",
+    "hangup_provider_code": 4010,
+    "ring_duration": 4,
+    "post_dial_delay": 1
+  },
+  "context_details": {
+    "recipient_data": {
+      "city": "बेंगलुरु",
+      "brand": "Hero",
+      "dealer_name": "विनायक हीरो मोटर्स",
+      "repeat_call": "no"
+    },
+    "recipient_phone_number": "+910000000000"
+  },
+  "batch_id": null,
+  "agent_version_id": "a7402968-11be-4370-8c1e-5a0b32a42860"
+}
