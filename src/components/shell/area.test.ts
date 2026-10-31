@@ -6,7 +6,6 @@ describe("areaOf", () => {
     ["/pulse", "client"],
     ["/pulse/preview", "client"],
     ["/heatmap", "client"],
-    ["/methodology", "client"],
     ["/ops", "ops"],
     ["/ops/dealers", "ops"],
     ["/ops/system", "ops"],

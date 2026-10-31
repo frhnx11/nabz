@@ -19,9 +19,23 @@ Batches in the Ops console, using our own test dealers, all on our own phone num
 1. **Ops** adds dealers and groups them into batches.
 2. **Calling a batch** starts a set: one call at a time, each using the agent for the dealer's language.
 3. **Bolna** places the call. The app collects the transcript and answers, and checks their quality.
-4. **The index engine** scores the answers. The **client pages** (Weekly Pulse, Brand × state, Methodology) show the result on every request.
+4. **The index engine** scores the answers. The **client pages** (Weekly Pulse, Brand × state) show the result on every request.
 
 Clients never see a dealer's name or number.
+
+## How the score works
+
+Each answer becomes a score from 0 to 100, where 50 means no change. A dealer's scores combine into the Demand index:
+
+| Sub-index         | Scored from                                                                                    | Share of Demand index |
+| ----------------- | ---------------------------------------------------------------------------------------------- | --------------------- |
+| Enquiries         | Up 100, same 50, down 0                                                                        | 25%                   |
+| Bookings momentum | Up 100, same 50, down 0                                                                        | 25%                   |
+| Stock momentum    | Days of stock against last week: down over 5% 100, within 5% 50, up over 5% 0                  | 20%                   |
+| Discount pressure | Up 100, same 50, down 0, flipped because more discounting is bad for demand                    | 15%                   |
+| Credit stress     | Loan rejections high 100, normal 50, low 0, flipped because more rejections are bad for demand | 15%                   |
+
+A published number is the average across dealers, with a 95% margin of error. If a dealer is called twice in a week, their newest usable call counts. Brand × state cells pool two weeks of answers and stay hidden below 3 dealers.
 
 ## It starts empty
 
@@ -31,15 +45,17 @@ There is no sample data. A new copy has no dealers, batches or calls, and every 
 
 One setting, `NABZ_MODE` in `.env.local`, decides who can be called. It defaults to `testing`.
 
-|                                     | `testing` (default)                                       | `production`      |
-| ----------------------------------- | --------------------------------------------------------- | ----------------- |
-| Add a dealer or change their number | Only numbers in `ALLOWED_NUMBERS`, otherwise an error     | Any valid number  |
-| Call a batch, Test call             | Only numbers in `ALLOWED_NUMBERS`                         | Any dealer        |
-| Everything else                     | The same                                                  | The same          |
+|                                     | `testing` (default)                                   | `production`     |
+| ----------------------------------- | ----------------------------------------------------- | ---------------- |
+| Add a dealer or change their number | Only numbers in `ALLOWED_NUMBERS`, otherwise an error | Any valid number |
+| Call a batch, Test call             | Only numbers in `ALLOWED_NUMBERS`                     | Any dealer       |
+| Everything else                     | The same                                              | The same         |
 
 In testing, any other number gets this error:
 
-> This number isn't allowed in testing mode. To call other numbers, set NABZ_MODE=production and add a premium Bolna API key in .env.local, then restart the app. See the README for the full steps.
+> This number isn't allowed in testing mode. To test with a number, add it to ALLOWED_NUMBERS in .env.local and restart the app. To call any number, set NABZ_MODE=production and use a premium Bolna API key. See the README for the full steps.
+
+So to try it on your own phone, you only need to add your number to `ALLOWED_NUMBERS`. A premium key is only for reaching numbers Bolna hasn't verified.
 
 In both modes, calls run one at a time, nothing dials unless `CALLING_ENABLED=true`, and spending stops at the daily limit (`BOLNA_DAILY_SPEND_CAP_USD`, $10 at most).
 
@@ -66,7 +82,7 @@ pnpm dev
 
 Open http://localhost:3000. Client pages start at `/pulse`, and the Ops console is at `/ops`.
 
-Everything works at this point except calling. No Bolna key is included, and none is needed to look around.
+You can now look around every page. No Bolna key is included, and none is needed for this. Calling won't work yet, and adding a dealer is refused until their number is in `ALLOWED_NUMBERS`.
 
 ## Make a real call (testing mode)
 

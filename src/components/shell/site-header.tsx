@@ -8,7 +8,6 @@ const AREA_NAV: Record<Area, NavItem[]> = {
   client: [
     { href: "/pulse", label: "Weekly Pulse" },
     { href: "/heatmap", label: "Brand × state" },
-    { href: "/methodology", label: "Methodology" },
   ],
   ops: [
     { href: "/ops/dealers", label: "Dealers" },

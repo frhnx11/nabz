@@ -12,11 +12,11 @@ export type CallingScope = { mode: CallingMode; allowedNumbers: readonly string[
 /** For code that only reads from Bolna: it can never place a call. */
 export const NO_NUMBERS: CallingScope = { mode: "testing", allowedNumbers: [] };
 
-const SWITCH_TO_PRODUCTION =
-  "To call other numbers, set NABZ_MODE=production and add a premium Bolna API key in .env.local, then restart the app. See the README for the full steps.";
+const HOW_TO_ALLOW =
+  "To test with a number, add it to ALLOWED_NUMBERS in .env.local and restart the app. To call any number, set NABZ_MODE=production and use a premium Bolna API key. See the README for the full steps.";
 
-export const NUMBER_NOT_ALLOWED = `This number isn't allowed in testing mode. ${SWITCH_TO_PRODUCTION}`;
-export const BATCH_NOT_ALLOWED = `No number in this batch is allowed in testing mode. ${SWITCH_TO_PRODUCTION}`;
+export const NUMBER_NOT_ALLOWED = `This number isn't allowed in testing mode. ${HOW_TO_ALLOW}`;
+export const BATCH_NOT_ALLOWED = `No number in this batch is allowed in testing mode. ${HOW_TO_ALLOW}`;
 
 export function numberAllowed(phoneE164: string, scope: CallingScope): boolean {
   return scope.mode === "production" || scope.allowedNumbers.includes(phoneE164);

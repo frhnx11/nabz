@@ -171,14 +171,12 @@ export function TableScroll({ children }: { children: ReactNode }) {
 export function KeyValues({
   rows,
   roomy = false,
-  large = false,
 }: {
   rows: [ReactNode, ReactNode][];
   roomy?: boolean;
-  large?: boolean;
 }) {
   return (
-    <dl className={`grid grid-cols-[auto_1fr] items-center gap-x-4 ${large ? "text-base" : "text-sm"} ${roomy || large ? "gap-y-4" : "gap-y-2"}`}>
+    <dl className={`grid grid-cols-[auto_1fr] items-center gap-x-4 text-sm ${roomy ? "gap-y-4" : "gap-y-2"}`}>
       {rows.map(([k, v], i) => (
         <div key={i} className="contents">
           <dt className="text-muted">{k}</dt>

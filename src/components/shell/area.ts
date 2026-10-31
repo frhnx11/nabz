@@ -8,7 +8,7 @@ export type Area = (typeof AREAS)[number];
 
 export const AREA_HOME: Record<Area, string> = { client: "/pulse", ops: "/ops/dealers" };
 
-const CLIENT_ROUTES = ["/pulse", "/heatmap", "/methodology"];
+const CLIENT_ROUTES = ["/pulse", "/heatmap"];
 
 function underRoute(pathname: string, route: string): boolean {
   return pathname === route || pathname.startsWith(`${route}/`);
